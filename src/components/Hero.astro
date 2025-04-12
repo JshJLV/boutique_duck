@@ -1,0 +1,23 @@
+---
+import modelo_001 from "../assets/images/Modelos/modelo_001.webp";
+---
+
+<section class="relative h-screen">
+  <div
+    class="absolute inset-0 bg-cover bg-center blur-md"
+    style={`background-image: url(${modelo_001.src})`}
+  >
+  </div>
+  <div class="relative z-10 flex items-center justify-center h-full">
+    <img
+      src={modelo_001.src}
+      alt="Modelo"
+      class="max-h-full max-w-full object-contain"
+    />
+    <a
+      href="#"
+      class="absolute text-white w-full h-12 p-3 rounded-sm top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] flex items-center justify-center text-center font-bold text-2xl"
+      >Ver productos</a
+    >
+  </div>
+</section>

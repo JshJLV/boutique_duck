@@ -1,0 +1,51 @@
+---
+import modelo002 from "../assets/images/Modelos/modelo_002.webp";
+import modelo003 from "../assets/images/Modelos/modelo_003.webp";
+import modelo004 from "../assets/images/Modelos/modelo_004.webp";
+import modelo005 from "../assets/images/Modelos/modelo_005.webp";
+
+const categories = [
+  {
+    id: "vestidos",
+    name: "Vestidos",
+    image: modelo002.src,
+  },
+  {
+    id: "pantalones",
+    name: "Pantalones",
+    image: modelo003.src,
+  },
+  {
+    id: "faldas",
+    name: "Faldas",
+    image: modelo004.src,
+  },
+  {
+    id: "calzado",
+    name: "Calzado",
+    image: modelo005.src,
+  },
+];
+---
+
+<section class="pt-8 pb-8 p-4">
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-4">
+    {
+      categories.map((category) => (
+        <a
+          href={`#${category.id}`}
+          class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center relative group"
+        >
+          <img
+            src={category.image}
+            alt={`Modelo ${category.name}`}
+            class="w-full h-96 object-cover"
+          />
+          <span class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-2xl font-bold opacity-50 md:opacity-0 group-hover:opacity-80 transition-opacity duration-300">
+            {category.name}
+          </span>
+        </a>
+      ))
+    }
+  </div>
+</section>
