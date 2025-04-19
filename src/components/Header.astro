@@ -48,34 +48,36 @@ import SearchIcon from "../assets/svg/Search.svg"; // Asegúrate de tener un íc
       />
     </a>
 
-    <!-- Botón de búsqueda (solo móvil) -->
-    <button
-      id="btn-search"
-      class="flex items-center w-9 h-9 md:hidden cursor-pointer"
-    >
-      <img src={SearchIcon.src} alt="Buscar" />
-    </button>
-
-    <!-- Buscador (versión escritorio) -->
-    <form action="/buscar" method="GET" class="hidden md:flex flex-1 mx-4">
-      <input
-        type="text"
-        name="q"
-        placeholder="Buscar productos..."
-        class="w-full md:w- px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#A38F85]"
-      />
+    <div class="flex flex-1">
+      <!-- Botón de búsqueda (solo móvil) -->
       <button
-        type="submit"
-        class="px-4 py-2 bg-[#A38F85] text-white rounded-r-md hover:bg-[#8c7a6f]"
+        id="btn-search"
+        class="flex items-center w-9 h-9 md:hidden cursor-pointer"
       >
-        Buscar
+        <img src={SearchIcon.src} alt="Buscar" />
       </button>
-    </form>
 
-    <!-- Botón de carrito -->
-    <button class="flex items-center w-9 h-9 cursor-pointer">
-      <img src={CartIcon.src} alt="Carrito de compras" />
-    </button>
+      <!-- Buscador (versión escritorio) -->
+      <form action="/buscar" method="GET" class="hidden md:flex flex-1 mx-4">
+        <input
+          type="text"
+          name="q"
+          placeholder="Buscar productos..."
+          class="w-full md:w- px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#A38F85]"
+        />
+        <button
+          type="submit"
+          class="px-4 py-2 bg-[#A38F85] text-white rounded-r-md hover:bg-[#8c7a6f]"
+        >
+          Buscar
+        </button>
+      </form>
+
+      <!-- Botón de carrito -->
+      <button class="flex items-center w-9 h-9 cursor-pointer">
+        <img src={CartIcon.src} alt="Carrito de compras" />
+      </button>
+    </div>
   </div>
 
   <!-- Dropdown de búsqueda (solo móvil) -->
