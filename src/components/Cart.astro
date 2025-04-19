@@ -1,0 +1,86 @@
+<!-- <script>
+  const currentPath = window.location.pathname;
+  const links = document.querySelectorAll("nav a");
+  links.forEach((link) => {
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+    }
+  });
+
+  const nav = document.getElementById("nav");
+  const btnOpen = document.getElementById("btn-open");
+  const btnClose = document.getElementById("btn-close");
+
+  btnOpen?.addEventListener("click", () => {
+    nav?.classList.remove("show-nav");
+  });
+
+  btnClose?.addEventListener("click", () => {
+    nav?.classList.add("show-nav");
+  });
+</script> --><!-- <header class="w-full bg-white border-b-2 border-[#A38F85]">
+  <div class="flex px-4 justify-end items-center py-5 w-full md:px-0 md:h-32">
+    <a href="/" class="bg-black">
+      <img
+        src={LogoCompleto.src}
+        alt="Logo de la página"
+        class="w-15 h-15 md:w-40 md:h-40"
+      />
+    </a>
+    <button
+      id="btn-open"
+      class="flex items-center w-9 h-9 md:hidden cursor-pointer"
+    >
+      <img src={OpenMenu.src} alt="Icono de menu" class="bg-black" />
+    </button>
+    <nav
+      id="nav"
+      class="absolute w-full md:w-auto flex flex-col top-0 bottom-0 right-0 px-8 duration-200 md:static md:bg-none md:flex-row md:px-0 show-nav z-20"
+    >
+      <button
+        id="btn-close"
+        class="flex justify-end text-white md:hidden py-5 relative left-[6px] cursor-pointer"
+      >
+        <img
+          src={CloseMenu.src}
+          alt="Icono de X para cerrar menu"
+          class="w-9 h-9"
+        />
+      </button>
+      <ul
+        class="flex flex-col items-center text-black gap-10 md:gap-4 md:flex-row"
+      >
+        <li>
+          <a
+            class="px-2 hover:text-[#A38F85] border-b-2 pb-2 border-transparent"
+            href="/">Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            class="px-2 hover:text-[#A38F85] border-b-2 pb-2 border-transparent"
+            href="#">Vestidos</a
+          >
+        </li>
+        <li>
+          <a
+            class="px-2 hover:text-[#A38F85] border-b-2 pb-2 border-transparent"
+            href="#">Pantalones</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header> -->
+<style>
+  .active {
+    border-bottom: 2px solid #cdc6c3;
+  }
+
+  @media (max-width: 768px) {
+    .show-nav {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+</style>

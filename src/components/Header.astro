@@ -1,97 +1,133 @@
 ---
 import OpenMenu from "../assets/svg/OpenMenu.svg";
 import CloseMenu from "../assets/svg/CloseMenu.svg";
-import LogoCompleto from "../assets/images/logo_completo-removebg-preview.png";
+import LogoCompleto from "../assets/images/Logo_completo-removebg.png";
+import CartIcon from "../assets/svg/Cart.svg";
+import SearchIcon from "../assets/svg/Search.svg"; // Asegúrate de tener un ícono para el botón de búsqueda
 ---
 
 <script>
-  const currentPath = window.location.pathname;
-  const links = document.querySelectorAll("nav a");
-  links.forEach((link) => {
-    if (link.getAttribute("href") === currentPath) {
-      link.classList.add("active");
-    }
-  });
-
-  const nav = document.getElementById("nav");
   const btnOpen = document.getElementById("btn-open");
   const btnClose = document.getElementById("btn-close");
+  const btnSearch = document.getElementById("btn-search");
+  const searchDropdown = document.getElementById("search-dropdown");
 
+  // Función para alternar el menú de categorías
   btnOpen?.addEventListener("click", () => {
-    nav?.classList.remove("show-nav");
+    const nav = document.getElementById("nav");
+    nav?.classList.toggle("hidden");
   });
 
   btnClose?.addEventListener("click", () => {
-    nav?.classList.add("show-nav");
+    const nav = document.getElementById("nav");
+    nav?.classList.toggle("hidden");
+  });
+
+  // Función para alternar el buscador
+  btnSearch?.addEventListener("click", () => {
+    searchDropdown?.classList.toggle("hidden");
   });
 </script>
 
-<header class="w-full bg-white border-b-2 border-[#A38F85]">
-  <div
-    class="flex px-6 justify-between items-center py-5 w-full md:px-0 md:w-11/12 md:mx-auto md:h-32"
-  >
-    <a href="/">
-      <img
-        src={LogoCompleto.src}
-        alt="Logo de la página"
-        class="w-20 h-20 md:w-40 md:h-40"
-      />
-    </a>
+<header class="w-full bg-white border-b-2 border-[#A38F85] relative">
+  <div class="flex justify-between items-center px-4 py-4 md:px-8">
+    <!-- Menú hamburguesa (solo móvil) -->
     <button
       id="btn-open"
       class="flex items-center w-9 h-9 md:hidden cursor-pointer"
     >
-      <img src={OpenMenu.src} alt="Icono de menu" class="caret-amber-400" />
+      <img src={OpenMenu.src} alt="Icono de menú" />
     </button>
-    <nav
-      id="nav"
-      class="absolute w-full md:w-auto flex flex-col top-0 bottom-0 right-0 px-8 duration-200 md:static md:bg-none md:flex-row md:px-0 show-nav z-20"
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center">
+      <img
+        src={LogoCompleto.src}
+        alt="Logo de la página"
+        class="w-20 h-20 md:w-20 md:h-20"
+      />
+    </a>
+
+    <!-- Botón de búsqueda (solo móvil) -->
+    <button
+      id="btn-search"
+      class="flex items-center w-9 h-9 md:hidden cursor-pointer"
     >
+      <img src={SearchIcon.src} alt="Buscar" />
+    </button>
+
+    <!-- Buscador (versión escritorio) -->
+    <form action="/buscar" method="GET" class="hidden md:flex flex-1 mx-4">
+      <input
+        type="text"
+        name="q"
+        placeholder="Buscar productos..."
+        class="w-full md:w- px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#A38F85]"
+      />
       <button
-        id="btn-close"
-        class="flex justify-end text-white md:hidden py-5 relative left-[6px] cursor-pointer"
+        type="submit"
+        class="px-4 py-2 bg-[#A38F85] text-white rounded-r-md hover:bg-[#8c7a6f]"
       >
-        <img
-          src={CloseMenu.src}
-          alt="Icono de X para cerrar menu"
-          class="w-9 h-9"
-        />
+        Buscar
       </button>
-      <ul
-        class="flex flex-col items-center text-black gap-10 md:gap-4 md:flex-row"
-      >
-        <li>
-          <a
-            class="px-2 hover:text-[#A38F85] border-b-2 pb-2 border-transparent"
-            href="/">Inicio</a
-          >
-        </li>
-        <li>
-          <a
-            class="px-2 hover:text-[#A38F85] border-b-2 pb-2 border-transparent"
-            href="#">Vestidos</a
-          >
-        </li>
-        <li>
-          <a
-            class="px-2 hover:text-[#A38F85] border-b-2 pb-2 border-transparent"
-            href="#">Pantalones</a
-          >
-        </li>
-      </ul>
-    </nav>
+    </form>
+
+    <!-- Botón de carrito -->
+    <button class="flex items-center w-9 h-9 cursor-pointer">
+      <img src={CartIcon.src} alt="Carrito de compras" />
+    </button>
   </div>
+
+  <!-- Dropdown de búsqueda (solo móvil) -->
+  <div
+    id="search-dropdown"
+    class="hidden absolute top-full left-0 w-full shadow-md p-4 z-50"
+  >
+    <form action="/buscar" method="GET">
+      <input
+        type="text"
+        name="q"
+        placeholder="Buscar productos..."
+        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#A38F85]"
+      />
+      <button
+        type="submit"
+        class="w-full mt-2 px-4 py-2 bg-[#A38F85] text-white rounded-md hover:bg-[#8c7a6f]"
+      >
+        Buscar
+      </button>
+    </form>
+  </div>
+
+  <!-- Menú de categorías -->
+  <nav
+    id="nav"
+    class="hidden bg-white md:flex flex-col md:flex-row items-center md:justify-center gap-4 md:gap-8 md:bg-transparent px-4 md:px-0 md:static fixed top-0 left-0 w-full h-full z-50"
+  >
+    <button
+      id="btn-close"
+      class="flex m-4 text-black md:hidden py-5 px-2 cursor-pointer"
+    >
+      <img src={CloseMenu.src} alt="Cerrar menú" class="w-9 h-9" />
+    </button>
+    <ul
+      class="flex flex-col md:pb-4 md:flex-row items-center gap-8 text-lg font-bold"
+    >
+      <li>
+        <a class="hover:text-[#A38F85]" href="#vestidos">Vestidos</a>
+      </li>
+      <li>
+        <a class="hover:text-[#A38F85]" href="#pantalones">Pantalones</a>
+      </li>
+      <li>
+        <a class="hover:text-[#A38F85]" href="#faldas">Faldas</a>
+      </li>
+      <li>
+        <a class="hover:text-[#A38F85]" href="#calzado">Calzado</a>
+      </li>
+      <li>
+        <a class="hover:text-[#A38F85]" href="#calzado">Accesorios</a>
+      </li>
+    </ul>
+  </nav>
 </header>
-
-<style>
-  .active {
-    border-bottom: 2px solid #cdc6c3;
-  }
-
-  @media (max-width: 768px) {
-    .show-nav {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-</style>
