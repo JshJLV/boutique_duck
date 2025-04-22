@@ -3,6 +3,7 @@ import modelo002 from "../assets/images/Modelos/modelo_002.webp";
 import modelo003 from "../assets/images/Modelos/modelo_003.webp";
 import modelo004 from "../assets/images/Modelos/modelo_004.webp";
 import modelo005 from "../assets/images/Modelos/modelo_005.webp";
+import modelo006 from "../assets/images/Modelos/modelo_006.webp";
 
 const categories = [
   {
@@ -25,15 +26,20 @@ const categories = [
     name: "Calzado",
     image: modelo005.src,
   },
+  {
+    id: "accesorios",
+    name: "Accesorios",
+    image: modelo006.src,
+  },
 ];
 ---
 
 <section class="pt-8 pb-8 p-4">
-  <div class="grid grid-cols-1 gap-4 md:grid-cols-4">
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-5">
     {
       categories.map((category) => (
         <a
-          href={`#${category.id}`}
+          href={`/products?category=${category.id}`}
           class="bg-white shadow-md rounded-lg overflow-hidden flex flex-col items-center relative group"
         >
           <img
