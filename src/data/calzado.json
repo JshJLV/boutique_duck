@@ -1,0 +1,10 @@
+[
+  {
+    "id": 8,
+    "name": "Botas blancas",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 19.99,
+    "image": "/images/Calzado/botas_blancas.webp",
+    "category": "calzado"
+  }
+]

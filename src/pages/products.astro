@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProductList from "../components/ProductList.jsx";
+import accesorios from "../data/accesorios.json";
+import calzado from "../data/calzado.json";
+import pantalones from "../data/pantalones.json";
+import vestidos from "../data/vestidos.json";
+const allProducts = [...accesorios, ...calzado, ...pantalones, ...vestidos];
+---
+
+<Layout>
+  <ProductList client:load allProducts={allProducts} />
+</Layout>
