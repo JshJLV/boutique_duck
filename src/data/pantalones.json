@@ -4,7 +4,55 @@
     "name": "Pantalon negro",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "price": 19.99,
-    "image": "/images/Pantalones/pantalon_01.jpeg",
+    "image": "/images/Pantalones/pantalon_01.webp",
+    "category": "pantalones"
+  },
+  {
+    "id": 10,
+    "name": "Pantalon gris",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 19.99,
+    "image": "/images/Pantalones/pantalon_02.webp",
+    "category": "pantalones"
+  },
+  {
+    "id": 11,
+    "name": "Pantalon azul",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 19.99,
+    "image": "/images/Pantalones/pantalon_03.webp",
+    "category": "pantalones"
+  },
+  {
+    "id": 12,
+    "name": "Pantalon blanco",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 19.99,
+    "image": "/images/Pantalones/pantalon_04.webp",
+    "category": "pantalones"
+  },
+  {
+    "id": 13,
+    "name": "Pantalon verde",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 19.99,
+    "image": "/images/Pantalones/pantalon_05.webp",
+    "category": "pantalones"
+  },
+  {
+    "id": 14,
+    "name": "Pantalon rojo",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 19.99,
+    "image": "/images/Pantalones/pantalon_06.webp",
+    "category": "pantalones"
+  },
+  {
+    "id": 15,
+    "name": "Pantalon amarillo",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 19.99,
+    "image": "/images/Pantalones/pantalon_07.webp",
     "category": "pantalones"
   }
 ]
