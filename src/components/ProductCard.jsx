@@ -3,7 +3,7 @@ const ProductCard = (props) => {
     <li key={props.id}>
       <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
         <a
-          href="#"
+          href={`/product/${props.id}`}
           className="flex justify-center items-center overflow-hidden"
         >
           <img

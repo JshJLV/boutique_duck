@@ -60,26 +60,8 @@ const ProductList = ({ allProducts }) => {
 
   return (
     <div>
-      {/* Barra de búsqueda */}
-      <input
-        type="text"
-        placeholder="Buscar productos..."
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        className="border p-2 rounded"
-      />
-
-      {/* Botones de categorías */}
-      <div>
-        <button onClick={() => setCategory("all")}>Todos</button>
-        <button onClick={() => setCategory("accesorios")}>Accesorios</button>
-        <button onClick={() => setCategory("calzado")}>Calzado</button>
-        <button onClick={() => setCategory("pantalones")}>Pantalones</button>
-        <button onClick={() => setCategory("vestidos")}>Vestidos</button>
-      </div>
-
       {/* Lista de productos */}
-      <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <ul class="grid grid-cols-1 gap-4 pt-4 pb-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {filteredProducts.map((product) => (
           <ProductCard
             key={product.id}
