@@ -1,0 +1,107 @@
+---
+import Layout from "../layouts/Layout.astro";
+import modelo_007 from "../assets/images/Modelos/modelo_007.webp";
+import modelo_008 from "../assets/images/Modelos/modelo_008.webp";
+import modelo_009 from "../assets/images/Modelos/modelo_009.webp";
+---
+
+<Layout>
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-10">
+    <div class="flex flex-col justify-center items-center">
+      <h1 class="text-2xl pb-4 font-bold">Sobre nosotros</h1>
+      <p class="text-pretty mb-3">
+        BOUTIQUE DUKE es una empresa de ropa establecida que se ha consolidado
+        como lider en la industria de la moda ética y sustentable. Fundada en
+        2025, la empresa se ha destacado por su compromiso con la producción
+        responsable y la creación de prendas de alta calidad con un impacto
+        ambiental
+      </p>
+      <p class="text-pretty">
+        Descubre Boutique Duke, donde la moda se encuentra con la
+        responsabilidad. Nuestra colección de ropa sustentable está diseñada
+        bajo una filosofía minimalista, priorizando líneas limpias, cortes
+        impecables y la versatilidad de cada pieza. Elevamos esta estética con
+        materiales de alta calidad y una confección cuidada, ofreciendo un lujo
+        que reside en la durabilidad, la ética y la atemporalidad. Boutique Duke
+        es para quienes valoran un armario consciente y sofisticado.
+      </p>
+    </div>
+    <div class="flex flex-col justify-center items-center p-2">
+      <img
+        src={modelo_007.src}
+        alt="Fotografia de la modelo"
+        class="w-full max-h-96 object-cover shadow-lg"
+      />
+    </div>
+    <div class="flex flex-col justify-center items-center p-2">
+      <img
+        src={modelo_008.src}
+        alt="Fotografia de la modelo"
+        class="w-full max-h-96 object-cover shadow-lg"
+      />
+    </div>
+    <div class="flex flex-col justify-center items-center p-2">
+      <h1 class="text-2xl pb-4 font-bold">Proposito</h1>
+      <p class="text-pretty mb-3">
+        Nuestro propósito al abrazar tanto la venta en línea como la física no
+        es solo expandir nuestro alcance, sino enriquecer su experiencia con
+        nuestra marca y nuestros valores.
+      </p>
+      <p class="text-pretty mb-3">
+        En Boutique Duke, creemos que la moda con propósito merece ser accesible
+        y experimentada de múltiples maneras. Nuestra estrategia omnicanal no es
+        solo una táctica de venta; es una extensión de nuestro compromiso con
+        ustedes y con el planeta.
+      </p>
+      <p class="text-pretty">
+        Buscamos construir una comunidad de individuos que valoran la belleza
+        atemporal, la producción responsable y una conexión auténtica con las
+        marcas que eligen. Al unir el poder del mundo digital con la calidez de
+        la interacción física, aspiramos a crear una experiencia Boutique Duke
+        que sea tan excepcional y consciente como las prendas que creamos
+      </p>
+    </div>
+    <div class="flex flex-col justify-center items-center p-2">
+      <h1 class="text-2xl pb-4 font-bold">Nuestros valores</h1>
+      <ul class="list-disc text-pretty mb-3">
+        <li>
+          <p class="text-pretty mb-3">
+            Sostenibilidad: Priorizar el respeto por el medio ambiente en todas
+            las etapas de producción.
+          </p>
+        </li>
+        <li>
+          <p class="text-pretty mb-3">
+            Ética: Garantizar condiciones laborales justas y transparentes para
+            todos los trabajadores.
+          </p>
+        </li>
+        <li>
+          <p class="text-pretty mb-3">
+            Calidad: Ofrecer prendas duraderas y bien confeccionadas que superen
+            las expectativas de los clientes.
+          </p>
+        </li>
+        <li>
+          <p class="text-pretty mb-3">
+            Transparencia: Compartir información sobre los materiales, la
+            fabricación y el impacto ambiental de sus productos.
+          </p>
+        </li>
+        <li>
+          <p class="text-pretty mb-3">
+            Responsabilidad social: Contribuir al desarrollo de comunidades
+            sostenibles.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-col justify-center items-center p-2">
+      <img
+        src={modelo_009.src}
+        alt="Fotografia de la modelo"
+        class="w-full max-h-96 object-cover shadow-lg"
+      />
+    </div>
+  </section>
+</Layout>
