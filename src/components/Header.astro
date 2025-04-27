@@ -1,120 +1,155 @@
 ---
+// filepath: c:\Users\jsh_l\Workspace\boutique_duck\src\components\Cart.astro
 import OpenMenu from "../assets/svg/OpenMenu.svg";
 import CloseMenu from "../assets/svg/CloseMenu.svg";
-import LogoCompleto from "../assets/images/Logo_completo-removebg.png";
+import LogoCompleto from "../assets/images/Logo_completo.png";
 import CartIcon from "../assets/svg/Cart.svg";
-import SearchIcon from "../assets/svg/Search.svg"; // Asegúrate de tener un ícono para el botón de búsqueda
 ---
 
 <script>
-  const btnOpen = document.getElementById("btn-open");
-  const btnClose = document.getElementById("btn-close");
-  const btnSearch = document.getElementById("btn-search");
-  const searchDropdown = document.getElementById("search-dropdown");
-
-  // Función para alternar el menú de categorías
-  btnOpen?.addEventListener("click", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     const nav = document.getElementById("nav");
-    nav?.classList.toggle("hidden");
-  });
+    const btnOpen = document.getElementById("btn-open");
+    const btnClose = document.getElementById("btn-close");
 
-  btnClose?.addEventListener("click", () => {
-    const nav = document.getElementById("nav");
-    nav?.classList.toggle("hidden");
-  });
+    btnOpen?.addEventListener("click", () => {
+      nav?.classList.remove("-translate-y-full", "opacity-0");
+      nav?.classList.add("translate-y-0", "opacity-100");
+    });
 
-  // Función para alternar el buscador
-  btnSearch?.addEventListener("click", () => {
-    searchDropdown?.classList.toggle("hidden");
+    btnClose?.addEventListener("click", () => {
+      nav?.classList.remove("translate-y-0", "opacity-100");
+      nav?.classList.add("-translate-y-full", "opacity-0");
+    });
   });
 </script>
 
 <header class="w-full bg-white border-b-2 border-[#A38F85] relative">
-  <div class="flex justify-between items-center px-4 py-4 md:px-8">
-    <!-- Menú hamburguesa (solo móvil) -->
-    <button
-      id="btn-open"
-      class="flex items-center w-9 h-9 md:hidden cursor-pointer"
-    >
+  <!-- Versión móvil -->
+  <div class="flex justify-between items-center px-4 py-4 md:hidden">
+    <!-- Menú hamburguesa -->
+    <button id="btn-open" class="flex items-center w-9 h-9 cursor-pointer">
       <img src={OpenMenu.src} alt="Icono de menú" />
     </button>
 
     <!-- Logo -->
     <a href="/" class="flex items-center">
-      <img
-        src={LogoCompleto.src}
-        alt="Logo de la página"
-        class="w-20 h-20 md:w-20 md:h-20"
-      />
+      <img src={LogoCompleto.src} alt="Logo de la página" class="w-20 h-20" />
     </a>
 
-    <div class="flex flex-1">
-      <!-- Botón de búsqueda (solo móvil) -->
-      <button
-        id="btn-search"
-        class="flex items-center w-9 h-9 md:hidden cursor-pointer"
-      >
-        <img src={SearchIcon.src} alt="Buscar" />
-      </button>
-
-      <!-- Buscador (versión escritorio) -->
-      <form action="/buscar" method="GET" class="hidden md:flex flex-1 mx-4">
-        <input
-          type="text"
-          name="q"
-          placeholder="Buscar productos..."
-          class="w-full md:w- px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#A38F85]"
-        />
-        <button
-          type="submit"
-          class="px-4 py-2 bg-[#A38F85] text-white rounded-r-md hover:bg-[#8c7a6f]"
-        >
-          Buscar
-        </button>
-      </form>
-
-      <!-- Botón de carrito -->
-      <button class="flex items-center w-9 h-9 cursor-pointer">
-        <img src={CartIcon.src} alt="Carrito de compras" />
-      </button>
-    </div>
+    <!-- Botón de carrito -->
+    <button class="flex items-center w-9 h-9 cursor-pointer">
+      <img src={CartIcon.src} alt="Carrito de compras" />
+    </button>
   </div>
 
-  <!-- Dropdown de búsqueda (solo móvil) -->
-  <div
-    id="search-dropdown"
-    class="hidden absolute top-full left-0 w-full bg-white shadow-md p-4 z-50"
-  >
-    <form action="/buscar" method="GET">
+  <!-- Barra de búsqueda (móvil) -->
+  <div class="px-4 py-2 md:hidden">
+    <form action="/buscar" method="GET" class="flex items-center">
       <input
         type="text"
         name="q"
         placeholder="Buscar productos..."
-        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#A38F85]"
+        class="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#A38F85]"
       />
       <button
         type="submit"
-        class="w-full mt-2 px-4 py-2 bg-[#A38F85] text-white rounded-md hover:bg-[#8c7a6f]"
+        class="px-4 py-2 bg-[#A38F85] text-white rounded-r-md hover:bg-[#8c7a6f]"
       >
         Buscar
       </button>
     </form>
   </div>
 
-  <!-- Menú de categorías -->
+  <!-- Menú desplegable (móvil) -->
   <nav
     id="nav"
-    class="hidden bg-white md:flex flex-col md:flex-row items-center md:justify-center gap-4 md:gap-8 md:bg-transparent px-4 md:px-0 md:static fixed top-0 left-0 w-full h-full z-50"
+    class="fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col items-center justify-center transform transition-transform duration-300 ease-in-out opacity-0 -translate-y-full"
   >
     <button
       id="btn-close"
-      class="flex m-4 text-black md:hidden py-5 px-2 cursor-pointer"
+      class="absolute top-4 right-4 w-9 h-9 cursor-pointer"
     >
-      <img src={CloseMenu.src} alt="Cerrar menú" class="w-9 h-9" />
+      <img src={CloseMenu.src} alt="Cerrar menú" />
     </button>
-    <ul
-      class="flex flex-col md:pb-4 md:flex-row items-center gap-8 text-lg font-bold"
-    >
+    <ul class="w-full">
+      <li>
+        <a
+          href="/products?category=vestidos"
+          class="block w-full text-center py-4 border-b border-gray-300 text-lg font-bold hover:bg-gray-100"
+        >
+          Vestidos
+        </a>
+      </li>
+      <li>
+        <a
+          href="/products?category=pantalones"
+          class="block w-full text-center py-4 border-b border-gray-300 text-lg font-bold hover:bg-gray-100"
+        >
+          Pantalones
+        </a>
+      </li>
+      <li>
+        <a
+          href="/products?category=faldas"
+          class="block w-full text-center py-4 border-b border-gray-300 text-lg font-bold hover:bg-gray-100"
+        >
+          Faldas
+        </a>
+      </li>
+      <li>
+        <a
+          href="/products?category=calzado"
+          class="block w-full text-center py-4 border-b border-gray-300 text-lg font-bold hover:bg-gray-100"
+        >
+          Calzado
+        </a>
+      </li>
+      <li>
+        <a
+          href="/products?category=accesorios"
+          class="block w-full text-center py-4 border-b border-gray-300 text-lg font-bold hover:bg-gray-100"
+        >
+          Accesorios
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Versión escritorio -->
+  <div class="hidden md:flex justify-between items-center px-8 py-4">
+    <!-- Logo -->
+    <a href="/" class="flex items-center">
+      <img src={LogoCompleto.src} alt="Logo de la página" class="w-20 h-20" />
+    </a>
+
+    <!-- Barra de búsqueda -->
+    <form action="/buscar" method="GET" class="flex flex-1 mx-8">
+      <input
+        type="text"
+        name="q"
+        placeholder="Buscar productos..."
+        class="flex-1 px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#A38F85]"
+      />
+      <button
+        type="submit"
+        class="px-4 py-2 bg-[#A38F85] text-white rounded-r-md hover:bg-[#8c7a6f]"
+      >
+        Buscar
+      </button>
+    </form>
+
+    <!-- Botón de carrito -->
+    <button class="flex items-center w-9 h-9 cursor-pointer">
+      <img src={CartIcon.src} alt="Carrito de compras" />
+    </button>
+  </div>
+
+  <!-- Barra de navegación (escritorio) -->
+  <nav
+    class="hidden md:flex justify-center items-center bg-white border-t border-gray-300"
+  >
+    <ul class="flex gap-8 py-4 text-lg font-bold">
       <li>
         <a class="hover:text-[#A38F85]" href="/products?category=vestidos"
           >Vestidos</a
