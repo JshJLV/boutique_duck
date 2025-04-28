@@ -61,7 +61,7 @@ const ProductList = ({ allProducts }) => {
   return (
     <div>
       {/* Lista de productos */}
-      <ul class="grid grid-cols-1 gap-3 pt-4 pb-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <ul class="grid gap-2 pt-4 pb-4 grid-cols-2 md:gap-3 md:grid-cols-3 lg:grid-cols-4">
         {filteredProducts.map((product) => (
           <ProductCard
             key={product.id}
