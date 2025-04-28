@@ -3,8 +3,72 @@
     "id": 8,
     "name": "Botas blancas",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 19.99,
+    "price": 499.99,
     "image": "/images/Calzado/botas_blancas.webp",
+    "category": "calzado"
+  },
+  {
+    "id": 9,
+    "name": "Botas cafes",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 499.99,
+    "image": "/images/Calzado/botas_cafes.webp",
+    "category": "calzado"
+  },
+  {
+    "id": 10,
+    "name": "Botas negras",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 599.99,
+    "image": "/images/Calzado/botas_negras.webp",
+    "category": "calzado"
+  },
+  {
+    "id": 11,
+    "name": "Zapato blanco bajo",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 499.99,
+    "image": "/images/Calzado/zapato_blanco_bajo.webp",
+    "category": "calzado"
+  },
+  {
+    "id": 12,
+    "name": "Zapato blanco de punta negra",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 699.99,
+    "image": "/images/Calzado/zapato_blanco_punta_negra.webp",
+    "category": "calzado"
+  },
+  {
+    "id": 13,
+    "name": "Zapato blanco",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 699.99,
+    "image": "/images/Calzado/zapato_blanco.webp",
+    "category": "calzado"
+  },
+  {
+    "id": 14,
+    "name": "Zapato negro alto",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 599.99,
+    "image": "/images/Calzado/zapato_negro_alto.webp",
+    "category": "calzado"
+  },
+  {
+    "id": 15,
+    "name": "Zapato negro",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 499.99,
+    "image": "/images/Calzado/zapato_negro.webp",
+    "category": "calzado"
+  },
+  {
+    "id": 16,
+    "name": "Zapato rojo",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "price": 699.99,
+    "image": "/images/Calzado/zapato_rojo.webp",
     "category": "calzado"
   }
 ]

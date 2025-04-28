@@ -1,57 +1,57 @@
 [
   {
-    "id": 9,
+    "id": 23,
     "name": "Pantalon negro",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 19.99,
+    "price": 499.99,
     "image": "/images/Pantalones/pantalon_01.webp",
     "category": "pantalones"
   },
   {
-    "id": 10,
+    "id": 24,
     "name": "Pantalon gris",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 19.99,
+    "price": 599.99,
     "image": "/images/Pantalones/pantalon_02.webp",
     "category": "pantalones"
   },
   {
-    "id": 11,
+    "id": 25,
     "name": "Pantalon azul",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 19.99,
+    "price": 599.99,
     "image": "/images/Pantalones/pantalon_03.webp",
     "category": "pantalones"
   },
   {
-    "id": 12,
+    "id": 26,
     "name": "Pantalon blanco",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 19.99,
+    "price": 549.99,
     "image": "/images/Pantalones/pantalon_04.webp",
     "category": "pantalones"
   },
   {
-    "id": 13,
+    "id": 27,
     "name": "Pantalon verde",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 19.99,
+    "price": 549.99,
     "image": "/images/Pantalones/pantalon_05.webp",
     "category": "pantalones"
   },
   {
-    "id": 14,
+    "id": 28,
     "name": "Pantalon rojo",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 19.99,
+    "price": 549.99,
     "image": "/images/Pantalones/pantalon_06.webp",
     "category": "pantalones"
   },
   {
-    "id": 15,
+    "id": 29,
     "name": "Pantalon amarillo",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 19.99,
+    "price": 699.99,
     "image": "/images/Pantalones/pantalon_07.webp",
     "category": "pantalones"
   }

@@ -2,10 +2,17 @@
 import Layout from "../../layouts/Layout.astro";
 import accesorios from "../../data/accesorios.json";
 import calzado from "../../data/calzado.json";
+import faldas from "../../data/faldas.json";
 import pantalones from "../../data/pantalones.json";
 import vestidos from "../../data/vestidos.json";
 
-const allProducts = [...accesorios, ...calzado, ...pantalones, ...vestidos];
+const allProducts = [
+  ...accesorios,
+  ...calzado,
+  ...faldas,
+  ...pantalones,
+  ...vestidos,
+];
 
 // Obtener el ID del producto desde la URL
 const { id } = Astro.params;
@@ -13,7 +20,13 @@ const { id } = Astro.params;
 // Generar rutas dinámicas
 export async function getStaticPaths() {
   // Combinar todos los productos
-  const allProducts = [...accesorios, ...calzado, ...pantalones, ...vestidos];
+  const allProducts = [
+    ...accesorios,
+    ...calzado,
+    ...faldas,
+    ...pantalones,
+    ...vestidos,
+  ];
 
   return allProducts.map((product) => ({
     params: { id: product.id.toString() },

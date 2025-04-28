@@ -3,9 +3,16 @@ import Layout from "../layouts/Layout.astro";
 import ProductList from "../components/ProductList.jsx";
 import accesorios from "../data/accesorios.json";
 import calzado from "../data/calzado.json";
+import faldas from "../data/faldas.json";
 import pantalones from "../data/pantalones.json";
 import vestidos from "../data/vestidos.json";
-const allProducts = [...accesorios, ...calzado, ...pantalones, ...vestidos];
+const allProducts = [
+  ...accesorios,
+  ...calzado,
+  ...faldas,
+  ...pantalones,
+  ...vestidos,
+];
 ---
 
 <Layout>

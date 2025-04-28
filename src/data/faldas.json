@@ -1,50 +1,50 @@
 [
   {
-    "id": 2,
-    "name": "Product 2",
+    "id": 17,
+    "name": "Falda negra lisa",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 29.99,
-    "image": "/images/Accesorios/bolso_002.webp",
-    "category": "accesorios"
+    "price": 399.99,
+    "image": "/images/Faldas/falda_001.webp",
+    "category": "faldas"
   },
   {
-    "id": 3,
-    "name": "Product 3",
+    "id": 18,
+    "name": "Falda negra lisa",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 39.99,
-    "image": "/images/Accesorios/bolso_003.webp",
-    "category": "accesorios"
+    "price": 399.99,
+    "image": "/images/Faldas/falda_002.webp",
+    "category": "faldas"
   },
   {
-    "id": 4,
-    "name": "Product 4",
+    "id": 19,
+    "name": "Falda negra con patron blanco",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 49.99,
-    "image": "/images/Accesorios/bolso_004.webp",
-    "category": "accesorios"
+    "price": 449.99,
+    "image": "/images/Faldas/falda_003.webp",
+    "category": "faldas"
   },
   {
-    "id": 5,
-    "name": "Product 5",
+    "id": 20,
+    "name": "Falda negra con patron blanco",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 59.99,
-    "image": "/images/Accesorios/bolso_005.webp",
-    "category": "accesorios"
+    "price": 499.99,
+    "image": "/images/Faldas/falda_004.webp",
+    "category": "faldas"
   },
   {
-    "id": 6,
-    "name": "Product 6",
+    "id": 21,
+    "name": "Falda negra con borde blanco",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 69.99,
-    "image": "/images/Accesorios/bolso_006.webp",
-    "category": "accesorios"
+    "price": 499.99,
+    "image": "/images/Faldas/falda_005.webp",
+    "category": "faldas"
   },
   {
-    "id": 7,
-    "name": "Bolso 7",
+    "id": 22,
+    "name": "Falda azul con botones amarillos",
     "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "price": 79.99,
-    "image": "/images/Accesorios/bolso_007.webp",
-    "category": "accesorios"
+    "price": 499.99,
+    "image": "/images/Faldas/falda_006.webp",
+    "category": "faldas"
   }
 ]
