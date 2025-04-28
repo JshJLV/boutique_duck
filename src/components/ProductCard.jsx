@@ -5,7 +5,7 @@ const ProductCard = (props) => {
         <div class="w-full max-w-sm bg-white border border-gray-200 rounded-sm shadow-sm h-[400px]">
           <div className="flex justify-center items-center overflow-hidden">
             <img
-              class="w-full h-80 object-cover md:object-none"
+              class="w-full h-80 object-cover md:object-contain"
               src={props.image}
               alt={props.name}
             />
