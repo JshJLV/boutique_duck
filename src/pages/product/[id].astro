@@ -59,30 +59,83 @@ if (!currentProduct) {
       <!-- Descripción del producto -->
       <p class="text-gray-600">{currentProduct?.description}</p>
 
-      <!-- Selección de tallas -->
-      <div>
-        <h2 class="text-lg font-semibold text-gray-800 mb-2">
-          Selecciona una talla:
-        </h2>
-        <div class="flex space-x-2">
-          <button
-            class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100"
-            >SM</button
-          >
-          <button
-            class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100"
-            >MD</button
-          >
-          <button
-            class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100"
-            >LG</button
-          >
-          <button
-            class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100"
-            >XL</button
-          >
-        </div>
-      </div>
+      <!-- Selección de tallas o tamaños -->
+      {
+        currentProduct?.category === "calzado" ? (
+          <div>
+            <h2 class="text-lg font-semibold text-gray-800 mb-2">
+              Selecciona tu talla (cm):
+            </h2>
+            <div class="flex flex-wrap gap-2 space-x-2">
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                21 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                21.5 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                22 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                22.5 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                23 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                23.5 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                24 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                24.5 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                25 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                25.5 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                26 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                26.5 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                27 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                27.5 cm
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                28 cm
+              </button>
+            </div>
+          </div>
+        ) : currentProduct?.category === "accesorios" ? null : (
+          <div>
+            <h2 class="text-lg font-semibold text-gray-800 mb-2">
+              Selecciona una talla:
+            </h2>
+            <div class="flex space-x-2">
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                SM
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                MD
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                LG
+              </button>
+              <button class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100">
+                XL
+              </button>
+            </div>
+          </div>
+        )
+      }
 
       <!-- Selección de colores -->
       <div>
@@ -109,19 +162,21 @@ if (!currentProduct) {
         <div class="flex items-center space-x-2">
           <button
             class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100"
-            >-</button
           >
+            -
+          </button>
           <span class="text-lg font-semibold">1</span>
           <button
             class="px-4 py-2 border rounded-lg text-gray-800 hover:bg-gray-100"
-            >+</button
           >
+            +
+          </button>
         </div>
 
         <!-- Precio -->
-        <span class="text-2xl font-bold text-gray-800"
-          >${currentProduct?.price}</span
-        >
+        <span class="text-2xl font-bold text-gray-800">
+          ${currentProduct?.price}
+        </span>
       </div>
 
       <!-- Botón de agregar al carrito -->
